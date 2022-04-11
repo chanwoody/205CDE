@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+ 
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        You can change some informations of the product.
+        <form action="/update/{{products.id}}" method="POST">
+          <div class="form-group">
+            <input type="text" name="product_name" value="{{products.product_name}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="introduce" value="{{products.introduce}}" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="price" value="{{products.price}}" class="form-control">
+          </div>
+          <select class="form-select" name="shopid">
+            <option value = 1>Yuen Long</option>
+            <option value = 2>Sha Tin</option>
+            <option value = 3>Kowloon Tong</option>
+          </select>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+{% endblock %}

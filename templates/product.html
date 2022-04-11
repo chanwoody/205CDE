@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}	
+{% block body %}
+	<div class="row">
+		{% for result in products %}
+		<div class="col-md-8">
+			
+			<h1>{{result.product_name}}</h1>
+			<p>upload by:{{result.name}}</p>
+			<b>Introdution of product</b>
+			<p style="border: 5px solid gray; height: 300px;text-indent: 100px">{{result.introduce}}</p>
+			
+			
+		</div>
+		<div class="col-md-4" style="border: 1px solid gray; background-color:lightblue; height: 200px">
+		<h2>Price:</h2>
+		${{result.price}}
+		<p><button>BUY</button></p>
+		<p>It sell in {{result.shopname}}</p>
+		<p>address: {{result.address}}</p>
+
+		</div>
+		{% endfor %}
+	</div>
+{% endblock %}

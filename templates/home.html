@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}	
+{% block body %}
+<div class="container-fluid py-5 text-center">
+<h1 class="display-6 fw-bold">Welcome to WCSTORE</h1>
+<p class="lead fs-4 d-flex justify-content-center">This is our store</p>
+<img src="{{url_for('static', filename='/image/discount.jpg')}}"style="max-width: 100%;height: auto;">
+</div>
+	
+    
+{% endblock %}
